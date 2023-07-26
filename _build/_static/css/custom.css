@@ -1,0 +1,8 @@
+/** css/custom.css **/
+
+/* This line is theme specific - it includes the base theme CSS */
+@import '_static/theme.css';  /* for the Read the Docs theme */
+
+.wy-side-nav-search{ background-color: #343131}
+.wy-nav-top{ background-color: #343131}
+.logo{ color: #343131;}
