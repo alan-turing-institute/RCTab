@@ -4,17 +4,18 @@
    contain the root `toctree` directive.
 
 .. toctree::
+   :hidden:
    :maxdepth: 2
-   :caption: Contents:
+   :glob:
+
+   content/installation.md
+   content/API.md
+   content/CLI.md
+   content/functions.md
+   content/contributing.md
+
 
 🚧 RCTab 🚧
 =================================
 
-RCTab is an Azure subscription management, reporting, and usage monitoring system.
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+An Azure subscription management, reporting, and usage monitoring system.
