@@ -4,5 +4,8 @@
 @import '_static/theme.css';  /* for the Read the Docs theme */
 
 .wy-side-nav-search{ background-color: #343131}
+.wy-side-nav-search a:hover{background-color: #343131 !important}
 .wy-nav-top{ background-color: #343131}
 .logo{ color: #343131;}
+a:hover{transform: scale(1.1); transition: transform 0.3s ease;}
+a:not(:hover) {transform: scale(1);transition: transform 0.3s ease-out;}
