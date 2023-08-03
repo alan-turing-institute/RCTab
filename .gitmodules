@@ -1,3 +1,4 @@
 [submodule "rctab-infrastructure"]
 	path = rctab-infrastructure
 	url = git@github.com:alan-turing-institute/rctab-infrastructure.git
+	branch = format-docstrings

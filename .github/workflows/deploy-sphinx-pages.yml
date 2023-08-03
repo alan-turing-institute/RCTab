@@ -16,17 +16,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-
-      - name: Set up Python 3.11
-        uses: actions/setup-python@v4
         with:
-          python-version: 3.11
-
-      - name: Install poetry
-        uses: snok/install-poetry@v1
-
-      - name: Install dependencies
-        run: poetry install
-
+          submodules: true
       - id: deployment
         uses: sphinx-notes/pages@v3
+        with:
+          checkout: false
+          python_version: 3.11
