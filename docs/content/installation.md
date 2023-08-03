@@ -1,3 +1,0 @@
-# Setting up RCTab
-
-To set up RCTab......

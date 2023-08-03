@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "rctab"
+version = "0.1.0"
+description = "An Azure subscription management, reporting, and usage monitoring system."
+authors = ["Your Name <you@example.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+src = { path = "rctab-infrastructure", develop = true}
+
+
+[tool.poetry.group.dev.dependencies]
+sphinx = "v6.2.1"
+sphinx-rtd-theme = "^1.2.2"
+myst-parser = "^2.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

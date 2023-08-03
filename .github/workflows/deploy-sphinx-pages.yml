@@ -16,5 +16,19 @@ jobs:
       pages: write
       id-token: write
     steps:
-    - id: deployment
-      uses: sphinx-notes/pages@v3
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python_version }}
+
+      - name: Install poetry
+        uses: abatilo/actions-poetry@v2.3.0
+
+      - name: Install dependencies
+        run: poetry install
+
+      - id: deployment
+        uses: sphinx-notes/pages@v3
