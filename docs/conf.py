@@ -2,8 +2,9 @@
 #
 # For the full list of built-in configuration values, see the documentation:
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
-
+import os
 import sphinx_rtd_theme
+import sys
 
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
@@ -12,11 +13,16 @@ project = 'RCTab'
 copyright = '2023, The Alan Turing Institute'
 author = 'The Alan Turing Institute'
 
+sys.path.insert(0, os.path.abspath('../rctab-infrastructure/src'))
+
+os.environ["SPHYNX_AUTODOC_MODE"] = "true"
+
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = ["myst_parser"]
+extensions = ["myst_parser", "sphinx.ext.autodoc", "sphinx.ext.napoleon", "sphinx.ext.autosummary"]
 
+autosummary_generate = True
 templates_path = ['_templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 

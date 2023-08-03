@@ -16,9 +16,38 @@ An Azure subscription management, reporting, and usage monitoring system.
 :maxdepth: 2
 :glob:
 content/rctab-readme.md
-content/installation.md
-content/API.md
-content/CLI.md
-content/functions.md
 content/contributing.md
+```
+
+```{toctree}
+:hidden:
+:maxdepth: 2
+:glob:
+:caption: Infrastructure
+content/infrastructure-docs.md
+content/infrastructure-code.rst
+```
+
+```{toctree}
+:hidden:
+:maxdepth: 2
+:glob:
+:caption: API
+content/API.md
+```
+
+```{toctree}
+:hidden:
+:maxdepth: 2
+:glob:
+:caption: CLI
+content/CLI.md
+```
+
+```{toctree}
+:hidden:
+:maxdepth: 2
+:glob:
+:caption: Functions
+content/functions.md
 ```
