@@ -8,7 +8,7 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.11"
-src = { path = "rctab-infrastructure", develop = true}
+src = { path = "./rctab-infrastructure", develop = true}
 
 
 [tool.poetry.group.dev.dependencies]
