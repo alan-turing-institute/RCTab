@@ -2,13 +2,13 @@
 name = "rctab"
 version = "0.1.0"
 description = "An Azure subscription management, reporting, and usage monitoring system."
-authors = ["Your Name <you@example.com>"]
+authors = []
 license = "MIT"
 readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.11"
-src = { path = "./rctab-infrastructure", develop = true}
+src = { path = "./rctab-infrastructure"}
 
 
 [tool.poetry.group.dev.dependencies]

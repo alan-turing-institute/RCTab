@@ -833,7 +833,7 @@ description = "Azure deployment code"
 optional = false
 python-versions = "^3.8.1"
 files = []
-develop = true
+develop = false
 
 [package.dependencies]
 pulumi = "^3.72.2"
@@ -866,4 +866,4 @@ zstd = ["zstandard (>=0.18.0)"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "d7cd7ba36564ac53380c019e9b7be17149b1c5479d6d2deb1a6f50355f6c5b8e"
+content-hash = "568f3e97cc96843e692b144ead4f4f7c14743535f94229b393292e6625747d75"
