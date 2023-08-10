@@ -36,3 +36,12 @@ content/infrastructure-code.rst
 content/cli-docs.md
 content/cli-code.rst
 ```
+
+```{toctree}
+:hidden:
+:maxdepth: 2
+:glob:
+:caption: Functions
+content/functions-docs.md
+content/functions-code.rst
+```

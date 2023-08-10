@@ -15,6 +15,8 @@ author = 'The Alan Turing Institute'
 
 sys.path.append(os.path.abspath('../rctab-infrastructure/src'))
 sys.path.append(os.path.abspath('../rctab-cli/rctab_cli'))
+sys.path.append(os.path.abspath('../rctab-functions/controller_function/controller'))
+sys.path.append(os.path.abspath('../rctab-functions/status_function/status'))
 
 os.environ["SPHYNX_AUTODOC_MODE"] = "true"
 

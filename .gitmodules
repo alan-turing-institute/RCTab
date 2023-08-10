@@ -7,3 +7,8 @@
 	path = rctab-cli
 	url = git@github.com:alan-turing-institute/rctab-cli.git
 	branch = update-docstrings
+
+[submodule "rctab-functions"]
+	path = rctab-functions
+	url = git@github.com:alan-turing-institute/rctab-functions.git
+	branch = status-docstrings

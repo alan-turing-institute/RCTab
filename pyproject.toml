@@ -10,7 +10,8 @@ readme = "README.md"
 python = "^3.11"
 src = { path = "./rctab-infrastructure"}
 rctab_cli = { path = "./rctab-cli"}
-
+rctab-controller-function = { path = "./rctab-functions/controller_function"}
+rctab-status-function = { path = "./rctab-functions/status_function"}
 
 [tool.poetry.group.dev.dependencies]
 sphinx = "v6.2.1"
@@ -20,3 +21,6 @@ myst-parser = "^2.0.0"
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+
+
