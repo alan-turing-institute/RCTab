@@ -9,7 +9,7 @@
 🚧 This documentation is under construction 🚧
 ```
 
-An Azure subscription management, reporting, and usage monitoring system.
+An Azure subscription management, reporting, and usage monitoring system. Created by The Institute.
 
 ```{toctree}
 :hidden:
@@ -32,22 +32,7 @@ content/infrastructure-code.rst
 :hidden:
 :maxdepth: 2
 :glob:
-:caption: API
-content/API.md
-```
-
-```{toctree}
-:hidden:
-:maxdepth: 2
-:glob:
 :caption: CLI
-content/CLI.md
-```
-
-```{toctree}
-:hidden:
-:maxdepth: 2
-:glob:
-:caption: Functions
-content/functions.md
+content/cli-docs.md
+content/cli-code.rst
 ```
