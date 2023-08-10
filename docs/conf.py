@@ -13,7 +13,8 @@ project = 'RCTab'
 copyright = '2023, The Alan Turing Institute'
 author = 'The Alan Turing Institute'
 
-sys.path.insert(0, os.path.abspath('../rctab-infrastructure/src'))
+sys.path.append(os.path.abspath('../rctab-infrastructure/src'))
+sys.path.append(os.path.abspath('../rctab-cli/rctab_cli'))
 
 os.environ["SPHYNX_AUTODOC_MODE"] = "true"
 
