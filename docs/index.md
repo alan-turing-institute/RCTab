@@ -45,3 +45,11 @@ content/cli-code.rst
 content/functions-docs.md
 content/functions-code.rst
 ```
+
+```{toctree}
+:hidden:
+:maxdepth: 2
+:glob:
+:caption: Code
+content/all-code.rst
+```

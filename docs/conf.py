@@ -13,7 +13,7 @@ project = 'RCTab'
 copyright = '2023, The Alan Turing Institute'
 author = 'The Alan Turing Institute'
 
-sys.path.append(os.path.abspath('../rctab-infrastructure/src'))
+sys.path.append(os.path.abspath('../rctab-infrastructure/rctab_infrastructure'))
 sys.path.append(os.path.abspath('../rctab-cli/rctab_cli'))
 sys.path.append(os.path.abspath('../rctab-functions/controller_function/controller'))
 sys.path.append(os.path.abspath('../rctab-functions/status_function/status'))

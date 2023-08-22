@@ -6,4 +6,7 @@ Code
    :toctree: _autosummary
    :recursive:
 
-   src
+   rctab_infrastructure
+   rctab_cli
+   status
+   controller

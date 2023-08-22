@@ -1677,6 +1677,26 @@ type = "directory"
 url = "rctab-functions/controller_function"
 
 [[package]]
+name = "rctab-infrastructure"
+version = "0.1.0"
+description = "Azure deployment code"
+optional = false
+python-versions = "^3.8.1"
+files = []
+develop = false
+
+[package.dependencies]
+pulumi = "^3.72.2"
+pulumi-azure-native = "^2.1.1"
+pulumi-postgresql = "^3.8.0"
+pulumi-random = "^4.13.1"
+pulumi-tls = "^4.10.0"
+
+[package.source]
+type = "directory"
+url = "rctab-infrastructure"
+
+[[package]]
 name = "rctab-status-function"
 version = "0.1.0"
 description = "Function app to collect status data"
@@ -1943,26 +1963,6 @@ lint = ["docutils-stubs", "flake8", "mypy"]
 test = ["pytest"]
 
 [[package]]
-name = "src"
-version = "0.1.0"
-description = "Azure deployment code"
-optional = false
-python-versions = "^3.8.1"
-files = []
-develop = false
-
-[package.dependencies]
-pulumi = "^3.72.2"
-pulumi-azure-native = "^2.1.1"
-pulumi-postgresql = "^3.8.0"
-pulumi-random = "^4.13.1"
-pulumi-tls = "^4.10.0"
-
-[package.source]
-type = "directory"
-url = "rctab-infrastructure"
-
-[[package]]
 name = "tabulate"
 version = "0.8.10"
 description = "Pretty-print tabular data"
@@ -2114,4 +2114,4 @@ multidict = ">=4.0"
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "b969b7d9ec16ad576453f2cfc53ab47f45eeca5aa98185db35d3bc4e5cb6b114"
+content-hash = "80f181f6d2aa2982bc95aabc586747da839abebbbf947e11a11c9ec3cbfd1962"
