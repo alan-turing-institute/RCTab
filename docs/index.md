@@ -3,19 +3,18 @@
 % You can adapt this file completely to your liking, but it should at least
 % contain the root `toctree` directive.
 
-# Welcome to RCTab
-
 ```{warning}
 🚧 This documentation is under construction 🚧
 ```
 
-An Azure subscription management, reporting, and usage monitoring system. Created by The Institute.
+```{include} ../README.md
+:relative-images:
+```
 
 ```{toctree}
 :hidden:
 :maxdepth: 2
 :glob:
-content/rctab-readme.md
 content/contributing.md
 ```
 
