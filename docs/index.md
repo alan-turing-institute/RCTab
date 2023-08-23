@@ -16,6 +16,7 @@ An Azure subscription management, reporting, and usage monitoring system. Create
 :maxdepth: 2
 :glob:
 content/rctab-readme.md
+content/contributing.md
 content/code_of_conduct.md
 ```
 
