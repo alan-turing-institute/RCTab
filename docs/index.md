@@ -17,6 +17,7 @@ An Azure subscription management, reporting, and usage monitoring system. Create
 :glob:
 content/rctab-readme.md
 content/contributing.md
+content/code_of_conduct.md
 ```
 
 ```{toctree}

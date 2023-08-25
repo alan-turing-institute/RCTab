@@ -1,3 +1,6 @@
-# Contributing
 
-To contribute to RCTab.....
+
+
+```{include} ../../CONTRIBUTING.md
+:relative-images:
+```
