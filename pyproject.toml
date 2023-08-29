@@ -10,12 +10,13 @@ readme = "README.md"
 python = "^3.11"
 sphinx-rtd-theme = {version = "^1.3.0", optional = true}
 sphinxcontrib-napoleon = {version = "^0.7", optional = true}
+myst-parser = {version = "^2.0.0", optional = true}
 
 
 [tool.poetry.group.dev.dependencies]
-sphinx = "v6.2.1"
-sphinx-rtd-theme = "^1.2.2"
-myst-parser = "^2.0.0"
+
+[tool.poetry.extras]
+docs = ["sphinx-rtd-theme", "sphinxcontrib-napoleon", "myst-parser"]
 
 [build-system]
 requires = ["poetry-core"]
