@@ -22,12 +22,13 @@ os.environ["SPHYNX_AUTODOC_MODE"] = "true"
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 extensions = [
-        "myst_parser",
-        "sphinx.ext.autodoc",
-        "sphinx.ext.napoleon",
-        "sphinx.ext.autosummary",
-        "sphinx.ext.intersphinx",
-        ]
+    "myst_parser",
+    "sphinx.ext.autodoc",
+    "sphinx.ext.napoleon",
+    "sphinx.ext.autosummary",
+    "sphinx.ext.intersphinx",
+    "subprojecttoctree",
+    ]
 
 intersphinx_mapping = {
     'python': ('https://docs.python.org/3/', None),
@@ -64,3 +65,9 @@ html_theme_options = {
 
 def setup (app):
     app.add_css_file('css/custom.css')
+
+
+# -- Options for Subprojecttoctree
+
+is_subproject = False
+readthedocs_url = "https://rctab.readthedocs.io"
