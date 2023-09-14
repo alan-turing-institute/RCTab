@@ -15,29 +15,29 @@ An Azure subscription management, reporting, and usage monitoring system. Create
     SubprojectTitle <subproject: rctab-cli>
 
 
-```{toctree}
-:hidden:
-:maxdepth: 2
-:glob:
-content/rctab-readme.md
-content/contributing.md
-content/code_of_conduct.md
-```
-
-```{toctree}
-:hidden:
-:maxdepth: 2
-:glob:
-:caption: Infrastructure
-content/infrastructure-docs.md
-content/infrastructure-code.rst
-```
-
-```{toctree}
-:hidden:
-:maxdepth: 2
-:glob:
-:caption: CLI
-content/cli-docs.md
-content/cli-code.rst
-```
+%```{toctree}
+%:hidden:
+%:maxdepth: 2
+%:glob:
+%content/rctab-readme.md
+%content/contributing.md
+%content/code_of_conduct.md
+%```
+%
+%```{toctree}
+%:hidden:
+%:maxdepth: 2
+%:glob:
+%:caption: Infrastructure
+%content/infrastructure-docs.md
+%content/infrastructure-code.rst
+%```
+%
+%```{toctree}
+%:hidden:
+%:maxdepth: 2
+%:glob:
+%:caption: CLI
+%content/cli-docs.md
+%content/cli-code.rst
+%```
