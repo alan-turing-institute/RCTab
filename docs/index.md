@@ -11,6 +11,10 @@
 
 An Azure subscription management, reporting, and usage monitoring system. Created by The Institute.
 
+.. subprojecttoctree::
+    SubprojectTitle <subproject: rctab-cli>
+
+
 ```{toctree}
 :hidden:
 :maxdepth: 2
