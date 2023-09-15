@@ -10,6 +10,6 @@ An Azure subscription management, reporting, and usage monitoring system. Create
 
 .. subprojecttoctree::
 
-    x
+    X <x>
     SubprojectTitle <subproject: rctab-cli>
 
