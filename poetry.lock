@@ -664,4 +664,4 @@ docs = ["myst-parser", "sphinx-rtd-theme", "sphinx-subprojecttoctree", "sphinxco
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "db7f54ab135fa514502fe2c5d3b2562f4fdf095aa27374998a29375cd8d96b52"
+content-hash = "e44abfac1e7a38bf061c52ec5c3dab19d7447a1f302d43ba8270dc7042450911"
