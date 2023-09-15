@@ -33,7 +33,7 @@ extensions = [
 intersphinx_mapping = {
     'python': ('https://docs.python.org/3/', None),
     'sphinx': ('https://www.sphinx-doc.org/en/master/', None),
-    'mysub': ('https://sphinx-main-project.readthedocs.io/projects/rctab_cli/en/latest/', None),
+    'mysub': ('https://rctab.readthedocs.io/projects/rctab-cli/en/latest/', None),
 }
 intersphinx_disabled_domains = ['std']
 
