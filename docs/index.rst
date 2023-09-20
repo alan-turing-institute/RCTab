@@ -1,15 +1,16 @@
 Welcome to RCTab
 ----------------
 
+.. warning:
+   🚧 This documentation is under construction 🚧
 
-```{warning}
-🚧 This documentation is under construction 🚧
-```
 
 An Azure subscription management, reporting, and usage monitoring system. Created by The Institute.
 
-.. subprojecttoctree::
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents
+   :glob:
+   :hidden:
 
-    X <x>
-    SubprojectTitle <subproject: rctab-cli>
-
+   content/*

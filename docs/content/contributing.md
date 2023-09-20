@@ -1,6 +1,1 @@
-
-
-
-```{include} ../../CONTRIBUTING.md
-:relative-images:
-```
+../../CONTRIBUTING.md
