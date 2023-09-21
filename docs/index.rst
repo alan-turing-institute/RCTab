@@ -22,14 +22,15 @@ Components
 
 The complete system comprises:
 
-* A web server `web server <https://github.com/alan-turing-institute/rctab-api>`_.
-* The `CLI <https://github.com/alan-turing-institute/rctab-cli>`_, which allows command line interaction with the web server.
-* Three `Function Apps <https://github.com/alan-turing-institute/rctab-functions>`_, which run background jobs to interact with Azure:
+* A web server (A.K.A. the "RCTab API").
+* The CLI, which allows command line interaction with the web server.
+* Three function apps, which run background jobs to interact with Azure:
 
   * Usage: Gets usage data from Azure and posts to this API.
   * Status: Gets information about subscriptions from Azure, such as state and RBAC and posts to this API.
   * Controller: Gets list of subscriptions and their desired state from the API and then enables or disables subscriptions on Azure.
 * An `authentication library <https://github.com/alan-turing-institute/fastapimsal>`_, which handles authentication using Microsoft's MSAL library for FastAPI.
+* Logging and alerts.
 
 Contribute
 ++++++++++
@@ -57,8 +58,8 @@ If you need to get in touch with us, please open an issue on our `GitHub repo <h
 
    API docs <https://rctab-api.readthedocs.io/en/latest/>
    API repository <https://github.com/alan-turing-institute/rctab-api>
-   Functions docs <https://rctab-functions.readthedocs.io/en/latest/>
-   Functions repository <https://github.com/alan-turing-institute/rctab-functions>
+   Function Apps docs <https://rctab-functions.readthedocs.io/en/latest/>
+   Function Apps repository <https://github.com/alan-turing-institute/rctab-functions>
    CLI docs <https://rctab-cli.readthedocs.io/en/latest/>
    CLI repository <https://github.com/alan-turing-institute/rctab-cli>
    Infrastructure docs <https://rctab-infrastructure.readthedocs.io/en/latest/>
