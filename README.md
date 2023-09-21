@@ -12,4 +12,4 @@ If you need to get in touch with us, please open an issue on GitHub. See also [C
 
 ## License
 
-RCTab is released under an MIT license. See [LICENSE](LICENSE).
+RCTab is released under an MIT licence. See [LICENSE](LICENSE).
