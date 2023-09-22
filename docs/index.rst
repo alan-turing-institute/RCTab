@@ -1,9 +1,6 @@
 Welcome to RCTab
 ----------------
 
-.. warning:
-   🚧 This documentation is under construction 🚧
-
 RCTab is an open-source subscription management and reporting system for Microsoft Azure.
 It gives users visibility of their subscriptions' spending via the web front-end and allows administrators to set hard budget limits using the CLI.
 With RCTab, you can give users more control over resource creation without spending extra time monitoring costs.
