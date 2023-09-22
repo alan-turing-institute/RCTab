@@ -39,6 +39,14 @@ There are two other ways to determine whether RCTab will ignore a subscription:
 * A subscription can be placed outside of the management group that RCTab has permissions over.
   In this case, RCTab will have no knowledge of the subscription, will not collect data, will not send emails and will not disable it.
 
+Administrator Access
+++++++++++++++++++++
+
+Adminstrators can use the CLI and can see all subscriptions on the frontend.
+To get adminstrator status, a user should log in to the frontend or request access via the CLI.
+This will add them to the ``users_rbac`` database table.
+To make that user an admin, somebody with direct access to the database should set the ``has_access=True`` for the user.
+
 Approvals and Allocations
 +++++++++++++++++++++++++
 
