@@ -6,29 +6,30 @@ tags:
   - Microsoft Azure
   - Infrastructure as Code
 authors:
+  - name: Iain Stenson
+    orcid: 0000-0001-7848-4154
+    affiliation: 1
   - name: Tomas Lazauskas
     orcid: 0000-0000-0000-0000
-    equal-contrib: true
     affiliation: 1
-  - name: Iain Stenson
+  - name: Oscar Giles
     orcid: 0000-0000-0000-0000
-    equal-contrib: true # (This is how you can denote equal contributions between multiple authors)
-    affiliation: 1
   - name: Joseph Palmer
     orcid: 0000-0000-0000-0000
-    equal-contrib: true # (This is how you can denote equal contributions between multiple authors)
     affiliation: 1
   - name: Pamela Wochner
     orcid: 0000-0000-0000-0000
-    equal-contrib: true # (This is how you can denote equal contributions between multiple authors)
     affiliation: 1
   - name: Eseoghene Ben-Iwhiwhu
     orcid: 0000-0000-0000-0000
-    equal-contrib: true # (This is how you can denote equal contributions between multiple authors)
     affiliation: 1
+  - name: The Research Computing Team
+    orcid: 0000-0000-0000-0000
+    affiliation: 1
+    corresponding: true
 affiliations:
- - name: The Alan Turing Institute, United Kingdom
-   index: 1
+  - name: The Alan Turing Institute, United Kingdom
+    index: 1
 date: 13 October 2023
 bibliography: paper.bib
 ---
