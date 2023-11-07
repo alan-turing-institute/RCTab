@@ -132,3 +132,8 @@ dmypy.json
 
 # Pycharm
 .idea/
+
+# JOSS Paper
+paper/media/figure1.png
+paper/paper.jats
+paper/paper.pdf
