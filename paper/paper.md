@@ -35,21 +35,22 @@ bibliography: paper.bib
 ---
 ## Summary
 
-Cloud computing provides research institutions the benefits of flexible and scalable computing and storage resources. However, the pay-for-what-you-use pricing model poses a challenge to organisations that need some certainty in outgoings.
+Commercial cloud services provide users with the benefits of access to advanced computing services as well as various services like web hosting, machine learning, and data analytics. However, they can also present challenges for organizations that require a degree of predictability and stability in their cost planning, as the cost control mechanisms are not always designed to accommodate the management of a large number of projects and users with different budgetary requirements.
 
-In response, we have developed [RCTab](https://rctab.readthedocs.io/) (**R**esearch **C**omputing **Tab**les), an open-source system for automating the management of [subscriptions](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-setup-guide/organize-resources#management-levels-and-hierarchy) on Azure, Microsoft’s cloud computing platform. It saves time spent monitoring costs and allows researchers to have greater control over their cloud resources without the risk of excessive spending.
+In response, we have developed [RCTab](https://rctab.readthedocs.io/) (**R**esearch **C**omputing **Tab**les), an open-source system for automating the management of [subscriptions](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-setup-guide/organize-resources#management-levels-and-hierarchy) on Azure, Microsoft’s cloud computing platform. It not only automates mundane management tasks, but also provides a framework for monitoring usage and reporting on costs, thus saving people's time and reducing the risk of excessive spending.
 
-It is written in Python and has Infrastructure as Code (IaC) deployment that can be used to quickly and repeatably deploy it to Azure.
+RCTab is designed to be flexible and extensible and can be easily adapted to the needs of different organisations. It is written in Python and has Infrastructure as Code (IaC) deployment that can be used to quickly and repeatably deploy it to Azure.
 
 ## Statement of Need
 
-Institutions are increasingly adopting cloud platforms for both operational and research computing infrastructure, with many adopting hybrid or cloud-first approaches. The benefits include easy and flexible access to cutting edge hardware without substantial upfront investment.
+Commercial cloud services, such as Amazon Web Services, Microsoft Azure, Google Cloud Platform, and others, offer users flexible and scalable computing and storage resources, in addition to a variety of services and unique solutions. Due to their flexibility and convenient on-demand access to these resources, commercial cloud services are increasingly becoming the preferred platform for both academic and commercial users. They are especially suited for handling heterogeneous workloads, enabling cloud bursting, or even serving as components of a hybrid cloud solution where the cloud complements on-premises resources.
 
-Compared to traditional infrastructure with dedicated servers (e.g. on-premises/HPC systems), this presents a new challenge in controlling costs, particularly for the latest hardware such as the GPUs. Therefore, it is important to have robust cost management mechanisms.
+On-demand access can present challenges for organisations that require a degree of predictability and stability in their cost planning. This is because the cost of cloud services can vary from month to month, and some providers do not offer convenient ways to set hard limits on the amount of money that can be spent or the duration until which the allocated budget is valid. This is especially true for organisations with a large number of users, such as research institutes, and can lead to significant unexpected costs, if the service is not monitored closely. To address this, organisations typically either limit the number of users accessing resources and the type of resources they can access, or employ dedicated staff to monitor resource usage and costs. Neither approach is ideal: the former can restrict the cloud's potential, while the latter can be time-consuming and prone to errors.
 
-A simple method to manage costs on Azure would be to have one Azure subscription per research project. Azure provides tools to monitor costs for a subscription, to forecast costs and to send alerts when a budget threshold has been reached.
 
-We identified an opportunity to extend Azure's in-built cost management functionality to make it more useful to researchers and research institutions by developing a system to turn off a subscription, which stops all spending, when a budget has been exceeded. In addition, we realised that adding an expiry date to subscriptions would be useful to the research community as grant funding is often time-limited.
+In particular, Microsoft Azure, which is the focus of this work, offers various tools for managing costs, such as [budgets](https://docs.microsoft.com/en-us/azure/cost-management-billing/costs/tutorial-acm-create-budgets), [cost alerts](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/cost-mgt-alerts-monitor-usage-spending), and [cost analysis](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/quick-acm-cost-analysis). While these tools are designed for individual subscriptions, they do not scale effectively for organisations with a large number of subscriptions. Moreover, they do not offer a mechanism to impose strict limits on spending or specify the duration for which a budget is valid.
+
+Our response to addresing this challenge on Azure is the development of [RCTab](https://rctab.readthedocs.io/), an open-source system for automating the management of subscriptions on Azure.
 
 ## Source Code
 
