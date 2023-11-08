@@ -35,7 +35,7 @@ bibliography: paper.bib
 ---
 ## Summary
 
-Commercial cloud services provide researchers with the benefits of flexible and scalable computing and storage resources. However, they can also present challenges for organizations that require a degree of predictability and stability in their cost planning, as the cost control mechanisms are not always designed to accommodate a large number of projects and users with different budgetary requirements.
+Commercial cloud services provide researchers with the benefits of flexible and scalable computing and storage resources. However, they can also present challenges for organizations that require a degree of predictability and stability in their cost planning, as the cost control mechanisms are not always designed to accommodate many projects and users with different budgetary requirements.
 
 In response, we have developed [RCTab](https://rctab.readthedocs.io/) (**R**esearch **C**omputing **Tab**les), an open-source system for automating the management of [subscriptions](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-setup-guide/organize-resources#management-levels-and-hierarchy) on Azure, Microsoft’s cloud computing platform. It not only automates mundane management tasks, but also provides a framework for monitoring usage and reporting on costs, thus saving people's time and reducing the risk of excessive spending.
 
@@ -47,12 +47,12 @@ Institutions are increasingly adopting cloud platforms, such as Amazon Web Servi
 
 They are especially suited for handling heterogeneous workloads, enabling cloud bursting, or even serving as components of a hybrid solution, where the cloud complements on-premises resources.
 
-On-demand access can present challenges for organisations that require a degree of certainty in their outgoings. This is because the cost of cloud services can vary by region and over time, and some providers do not offer convenient ways to set hard limits on the amount of money or duration for which an allocated budget is valid. This is especially true for organisations with a large number of users, such as research institutes, and can lead to significant unexpected costs if the service is not monitored closely. To address this, organisations typically either limit the number of users accessing resources and the type of resources they can access, or employ dedicated staff to monitor resource usage and costs. Neither approach is ideal: the former can restrict the cloud's potential, while the latter can be time-consuming and prone to errors.
+On-demand access can present challenges for organisations that require a degree of certainty in their outgoings. This is because the cost of cloud services can vary by region and over time, and some providers do not offer convenient ways to set hard limits on the amount of money or duration for which an allocated budget is valid. This is especially true for organisations with many users, such as research institutes, and can lead to significant unexpected costs if the service is not monitored closely. To address this, organisations typically either limit the number of users accessing resources and the type of resources they can access or employ dedicated staff to monitor resource usage and costs. Neither approach is ideal: the former can restrict the cloud's potential, while the latter can be time-consuming and prone to errors.
 
 
-In particular, Microsoft Azure, which is the focus of this work, offers various tools for managing costs, such as [budgets](https://docs.microsoft.com/en-us/azure/cost-management-billing/costs/tutorial-acm-create-budgets), [cost alerts](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/cost-mgt-alerts-monitor-usage-spending), and [cost analysis](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/quick-acm-cost-analysis). While these tools are designed for individual subscriptions, they do not scale effectively for organisations with a large number of subscriptions. Moreover, they do not offer a mechanism to impose strict limits on spending or specify the duration for which a budget is valid.
+In particular, Microsoft Azure, which is the focus of this work, offers various tools for managing costs, such as [budgets](https://docs.microsoft.com/en-us/azure/cost-management-billing/costs/tutorial-acm-create-budgets), [cost alerts](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/cost-mgt-alerts-monitor-usage-spending), and [cost analysis](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/quick-acm-cost-analysis). While these tools are designed for individual subscriptions, they do not scale effectively for organisations with many subscriptions. Moreover, they do not offer a mechanism to impose strict limits on spending or specify the duration for which a budget is valid.
 
-Our response to addresing this challenge on Azure is the development of [RCTab](https://rctab.readthedocs.io/), an open-source system for automating the management of subscriptions on Azure.
+Our response to addressing this challenge on Azure is the development of [RCTab](https://rctab.readthedocs.io/), an open-source system for automating the management of subscriptions on Azure.
 
 ## Source Code
 
@@ -79,7 +79,7 @@ Once deployed to Azure, an instance of RCTab will comprise:
 
 Users can use the web frontend to see their subscriptions' spending while administrators can use the CLI to create and edit budgets. RCTab integrates with Microsoft Entra ID (previously "Azure Active Directory") to provide "Single Sign On" authentication for both users and administrators.
 
-The Usage and Status functions run on an schedule to collect information about subscriptions and post it to the web server.
+The Usage and Status functions run on a schedule to collect information about subscriptions and post it to the web server.
 
 The Controller function will check hourly to see whether any subscriptions need to be turned off or on.
 
