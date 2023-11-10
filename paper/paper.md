@@ -33,11 +33,12 @@ affiliations:
 date: 13 October 2023
 bibliography: paper.bib
 ---
+
 ## Summary
 
 Commercial cloud services provide researchers with the benefits of flexible and scalable computing and storage resources. However, they can also present challenges for organizations that require a degree of predictability and stability in their cost planning, as the cost control mechanisms are not always designed to accommodate large numbers of projects and users with different budgetary requirements.
 
-In response, we have developed [RCTab](https://rctab.readthedocs.io/) (**R**esearch **C**omputing **Tab**les), an open-source system for automating the management of [subscriptions](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-setup-guide/organize-resources#management-levels-and-hierarchy) on Azure, Microsoft’s cloud computing platform. It not only automates mundane management tasks, but also provides a framework for monitoring usage and reporting on costs, thus saving people's time and reducing the risk of excessive spending.
+In response, we have developed [RCTab](https://rctab.readthedocs.io/) (**R**esearch **C**omputing **Tab**les), an open-source system for automating the management of [subscriptions](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-setup-guide/organize-resources#management-levels-and-hierarchy) on Azure, Microsoft’s cloud computing platform. It not only automates mundane management tasks, but also provides a framework for monitoring usage and reporting on costs, thus saving people's time and reducing the risk of excessive spending, and a rich source of data for usage forecasting.
 
 RCTab is designed to be extensible, so can be easily adapted to the needs of different organisations. It is written in Python and has Infrastructure as Code (IaC) deployment for quick and reliable deployment to Azure.
 
@@ -74,13 +75,17 @@ Once deployed to Azure, an instance of RCTab will comprise:
 
 ![System diagram.\label{fig:Figure 1}](figure1.png)
 
-Users can use the web frontend to see their subscriptions' spending while administrators can use the CLI to create and edit budgets. RCTab integrates with Microsoft Entra ID (previously "Azure Active Directory") to provide "Single Sign On" authentication for both users and administrators.
+Users can use the web frontend to see subscriptions' spending and budget details, such as remaining amount, expiration date, the project to which spending will be charged and list of RBAC assignments.
 
-The Usage and Status functions run on a schedule to collect information about subscriptions and post it to the web server.
+Administrators can use the CLI to create and edit budgets, override budgets (for critical subscriptions that must never be turned off) and get JSON-format summaries.
 
-The Controller function will check hourly to see whether any subscriptions need to be turned off or on.
+RCTab integrates with Microsoft Entra ID (previously "Azure Active Directory") to provide "Single Sign On" authentication for the frontend and CLI.
 
-The web server will email users about changes to their subscriptions.
+The Usage and Status functions run on a schedule to collect information about subscriptions' recent spending and current state, respectively, and post it to the web server.
+
+The Controller function will poll the web server to see whether any subscriptions need to be turned off or on.
+
+The web server will email users about changes to their subscriptions and send daily email summaries.
 
 ## Lifecycle of a Subscription
 
@@ -88,15 +93,15 @@ A simple method for organising an Azure tenant is to create one subscription per
 
 Once a subscription has been created, it will need to be placed into a management group so that RCTab can monitor it. RCTab will have been given control over a management group during setup.
 
-Using the CLI, an administrator must add an "approval" for the subscription to RCTab that specifies the amount and duration of the budget for the subscription.
+Using the CLI, an administrator can add an "approval" for the subscription to RCTab that specifies the amount and duration of the budget for the subscription.
 
 When the subscription approaches its budget or expiration date, RCTab will email users with role assignments to give them a chance to request a budget increase or an extension.
 
-If this is granted, the admin can extend the approval with the CLI.
+If this is granted, the admin can extend the approval with the CLI. The approval has fields to link to the email or support request used to request the extension.
 
 If the request is denied, the subscription will be disabled by RCTab and, again, users will be notified by email. Azure will permanently delete the subscription after approximately 90 days, though the subscription can be re-activated up until that point.
 
 ## Acknowledgements
 
 - This work was supported in part through computational resources provided by The Alan Turing Institute under EPSRC grant EP/N510129/1 and with the help of a generous gift from Microsoft Corporation.
-- We acknowledge contributions by Oscar Giles, Markus Hauru, Jim Madge and Federico Nanni.
+- We would like to acknowledge code and documentation contributions by Oscar Giles, Markus Hauru, Jim Madge and Federico Nanni.
