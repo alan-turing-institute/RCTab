@@ -105,6 +105,8 @@ RBAC assignments can be used to grant permissions to researchers at the subscrip
 Once a subscription has been created, it will need to be placed into a management group so that RCTab can monitor it.
 RCTab will have been given control over a management group during setup.
 
+![System diagram.\label{fig:Figure 2}](figure2.png)
+
 Using the CLI, an administrator can add an "approval" for the subscription to RCTab that specifies the amount and duration of the budget for the subscription.
 
 When the subscription approaches its budget or expiration date, RCTab will email users with role assignments to give them a chance to request a budget increase or an extension.
