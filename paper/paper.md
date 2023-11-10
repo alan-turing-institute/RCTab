@@ -10,12 +10,12 @@ authors:
     orcid: 0000-0001-7848-4154
     affiliation: 1
   - name: Tomas Lazauskas
-    orcid: 0000-0000-0000-0000
+    orcid: 0000-0002-8351-9857
     affiliation: 1
   - name: Oscar Giles
     orcid: 0000-0000-0000-0000
   - name: Joseph Palmer
-    orcid: 0000-0000-0000-0000
+    orcid: 0000-0002-5593-9352
     affiliation: 1
   - name: Pamela Wochner
     orcid: 0000-0000-0000-0000
@@ -24,7 +24,6 @@ authors:
     orcid: 0000-0000-0000-0000
     affiliation: 1
   - name: The Research Computing Team
-    orcid: 0000-0000-0000-0000
     affiliation: 1
     corresponding: true
 affiliations:
@@ -36,27 +35,25 @@ bibliography: paper.bib
 
 ## Summary
 
-Commercial cloud services provide researchers with the benefits of flexible and scalable computing and storage resources.
-However, they can also present challenges for organizations that require a degree of predictability and stability in their cost planning, as the cost control mechanisms are not always designed to accommodate large numbers of projects and users with different budgetary requirements.
+The advent of commercial cloud services has provided researchers with the benefits of flexible and scalable computing and storage resources.
+However, they present a challenge for organizations that require predictability in their expenditure, as the cost control mechanisms are not always well suited to large numbers of research projects with varied budgetary constraints.
 
 In response, we have developed [RCTab](https://rctab.readthedocs.io/) (**R**esearch **C**omputing **Tab**les), an open-source system for automating the management of [subscriptions](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-setup-guide/organize-resources#management-levels-and-hierarchy) on Azure, Microsoft’s cloud computing platform.
-It not only automates mundane management tasks, but also provides a framework for monitoring usage and reporting on costs, thus saving people's time and reducing the risk of excessive spending, and a rich source of data for usage forecasting.
+RCTab automates the mundane management tasks of monitoring usage, alerting stakeholders of impending overspend and stopping subscriptions once they are over-budget.
+This save administrative time, reduces the risk of excessive spending and provides a rich source of data for usage forecasting.
 
-RCTab is designed to be extensible, so can be easily adapted to the needs of different organisations.
+RCTab is designed to be customisable and extensible, so can be easily adapted to the needs of different organisations.
 It is written in Python and has Infrastructure as Code (IaC) deployment for quick and reliable deployment to Azure.
 
 ## Statement of Need
 
-Institutions are increasingly adopting cloud platforms, such as Amazon Web Services, Microsoft Azure and Google Cloud Platform, for both operational and research computing infrastructure.
-Cloud platforms are especially suited to heterogeneous or unpredictable workloads and can be employed as part of a hybrid solution, where the cloud complements on-premises resources.
-
-However, on-demand access can present challenges for organisations that require a degree of certainty in their outgoings.
-This is because the cost of cloud services can vary by region and over time, and some providers do not offer convenient ways to set hard limits on a project's budget or duration.
-This is especially true for organisations with many technical users, such as research institutes, and can lead to significant unexpected costs if the service is not monitored closely.
-To address this, organisations typically either limit the number of users accessing resources and the type of resources they can access or employ dedicated staff to monitor resource usage and costs.
+Institutions are increasingly adopting cloud platforms, such as Amazon Web Services, Microsoft Azure and Google Cloud Platform, for their operational and research computing infrastructure.
+However, on-demand pricing can present challenges for organisations that require a degree of certainty in their outgoings and this is compounded when the cost of services is dynamic.
+This is especially true for organisations with technical users, who require both autonomy and access to the latest hardware, such as multi-GPU virtual machines.
+Since providers don't always offer convenient ways to set hard limits on a project's budget or duration, organisations typically either limit the number of users accessing resources and the type of resources they can access or employ dedicated staff to monitor resource usage and costs.
 Neither approach is ideal: the former can restrict the cloud's potential, while the latter can be time-consuming and prone to errors.
 
-In particular, Microsoft Azure, which is the focus of this work, offers tools for managing costs, such as [budgets](https://docs.microsoft.com/en-us/azure/cost-management-billing/costs/tutorial-acm-create-budgets), [cost alerts](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/cost-mgt-alerts-monitor-usage-spending), and [cost analysis](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/quick-acm-cost-analysis).
+Microsoft Azure, which is the focus of this work, offers tools for managing costs, such as [budgets](https://docs.microsoft.com/en-us/azure/cost-management-billing/costs/tutorial-acm-create-budgets), [cost alerts](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/cost-mgt-alerts-monitor-usage-spending), and [cost analysis](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/quick-acm-cost-analysis).
 These tools are designed for individual subscriptions, and they do not scale effectively for organisations with many subscriptions.
 Moreover, they do not offer a mechanism to impose strict limits on spending or specify the duration for which a budget is valid.
 
@@ -73,6 +70,8 @@ The source code for RCTab is contained in five repositories:
 - the [eponymous repository](https://github.com/alan-turing-institute/rctab) houses the general documentation (the other repositories also have sites for component-specific documentation).
 
 Detailed instructions on how to deploy RCTab to Azure with Pulumi can be found in the docs for the Infrastructure repository.
+Once Pulumi has been installed and the necessary settings have been configured, an instance of RCTab can be deployed or destroyed in minutes.
+Additional instances (e.g. for testing) can also be created quickly.
 
 ## Operation
 
@@ -88,7 +87,7 @@ Once deployed to Azure, an instance of RCTab will comprise:
 
 Users can use the web frontend to see subscriptions' spending and budget details, such as remaining amount, expiration date, the project to which spending will be charged and list of RBAC assignments.
 
-Administrators can use the CLI to create and edit budgets, override budgets (for critical subscriptions that must never be turned off) and get JSON-format summaries.
+Administrators can use the CLI to create and edit budgets, override budgets (for critical subscriptions that must never be turned off) and get summaries.
 
 RCTab integrates with Microsoft Entra ID (previously "Azure Active Directory") to provide "Single Sign On" authentication for the frontend and CLI.
 
@@ -96,7 +95,7 @@ The Usage and Status functions run on a schedule to collect information about su
 
 The Controller function will poll the web server to see whether any subscriptions need to be turned off or on.
 
-The web server will email users about changes to their subscriptions and send daily email summaries.
+The web server will email users about changes to their subscriptions and send daily email summaries to administrators.
 
 ## Lifecycle of a Subscription
 
