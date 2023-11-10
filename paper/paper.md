@@ -18,10 +18,10 @@ authors:
     orcid: 0000-0002-5593-9352
     affiliation: 1
   - name: Pamela Wochner
-    orcid: 0000-0000-0000-0000
+    orcid: 0000-0003-4066-8614
     affiliation: 1
   - name: Eseoghene Ben-Iwhiwhu
-    orcid: 0000-0000-0000-0000
+    orcid: 0000-0002-1176-866X
     affiliation: 1
   - name: The Research Computing Team
     affiliation: 1
