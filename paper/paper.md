@@ -122,4 +122,10 @@ Azure will permanently delete the subscription after approximately 90 days, thou
 ## Acknowledgements
 
 - This work was supported in part through computational resources provided by The Alan Turing Institute under EPSRC grant EP/N510129/1 and with the help of a generous gift from Microsoft Corporation.
-- We would like to acknowledge code and documentation contributions by Oscar Giles, Markus Hauru, Jim Madge and Federico Nanni.
+- Oscar Giles is the original project author, responsible for initial design and implementation of the API and CLI.
+- Iain Stenson added the function apps and newer features of the API and CLI.
+- Tomas Lazauskas provided guidance and support for the project, as well as contributions to the API codebase.
+- Joseph Palmer refined the automated deployment and the front-end details pages, amongst other work.
+- Pamela Wochner added summary emails, as well as work on preparations for making the project open-source.
+- In addition to code review and contributions, Ese provided feedback on the documentation.
+- We would like to acknowledge code and documentation contributions by Markus Hauru, Jim Madge and Federico Nanni.
