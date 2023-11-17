@@ -127,5 +127,5 @@ Azure will permanently delete the subscription after approximately 90 days, thou
 - Tomas Lazauskas provided guidance and support for the project, as well as contributions to the API codebase.
 - Joseph Palmer refined the automated deployment and the front-end details pages, amongst other work.
 - Pamela Wochner added summary emails, as well as work on preparations for making the project open-source.
-- In addition to code review and contributions, Ese provided feedback on the documentation.
+- In addition to code review and contributions, Eseoghene Ben-Iwhiwhu provided feedback on the documentation.
 - We would like to acknowledge code and documentation contributions by Markus Hauru, Jim Madge and Federico Nanni.
