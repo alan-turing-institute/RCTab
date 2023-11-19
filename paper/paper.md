@@ -39,7 +39,7 @@ The advent of commercial cloud services has provided researchers with the benefi
 
 ## Statement of Need
 
-Institutions are increasingly adopting cloud platforms, such as Amazon Web Services, Microsoft Azure and Google Cloud Platform, for their operational and research computing infrastructure.
+Institutions are adopting cloud platforms, such as Amazon Web Services, Microsoft Azure and Google Cloud Platform, for their operational and research computing infrastructure.
 However, on-demand pricing can present challenges for organisations that require certainty in their expenditure.
 This is especially true for organisations with technical users, who require both autonomy and access to the latest hardware, such as multi-GPU virtual machines.
 The limitations of budget monitoring and enforcing tools can require organisations to either limit the number of users accessing resources and the type of resources they can access or employ dedicated staff to monitor resource usage and costs.
