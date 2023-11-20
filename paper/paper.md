@@ -36,19 +36,19 @@ bibliography: paper.bib
 ## Summary
 
 The advent of commercial cloud services has provided researchers with the benefits of flexible and scalable computing and storage resources.
-However, they present a challenge for organisations that require predictability in their expenditure, as the cost control mechanisms are not always well suited to large numbers of research projects with varied budgetary constraints.
-
-In response, we have developed [RCTab](https://rctab.readthedocs.io/) (**R**esearch **C**omputing **Tab**les), an open-source system for automating the management of [subscriptions](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-setup-guide/organize-resources#management-levels-and-hierarchy) on Azure, Microsoft’s cloud computing platform.
-RCTab automates the mundane management tasks of monitoring usage, alerting stakeholders of impending overspend and stopping subscriptions once they are over-budget.
-This saves administrative time, reduces the risk of excessive spending and provides a rich source of data for usage forecasting.
-
+Unfortunately, cloud providers do not always provide the ability to enforce strict budget controls, allowing users to overspend.
+This can present serious challenges for adoption in research organisations that need to centrally disseminate cloud resources to researchers with independent budgets.
+In response, we have developed [RCTab](https://rctab.readthedocs.io/) (**R**esearch **C**omputing **Tab**les), an open-source system for budget control and [subscription](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-setup-guide/organize-resources#management-levels-and-hierarchy) management.
+RCTab enables organisations to centrally manage cloud resources while enforcing strict budget controls.
+Organisations can allocate budgets, and RCTab will automatically monitor usage and shut down cloud resources when it is consumed.
+It enables users to monitor their budget usage via a web interface and email alert system.
 RCTab is designed to be customisable and extensible, so can be easily adapted to the needs of different organisations.
 It is written in Python and has Infrastructure as Code (IaC) deployment for quick and reliable deployment to Azure.
 
 ## Statement of Need
 
-Institutions are increasingly adopting cloud platforms, such as Amazon Web Services, Microsoft Azure and Google Cloud Platform, for their operational and research computing infrastructure.
-However, on-demand pricing can present challenges for organisations that require a degree of certainty in their outgoings.
+Institutions are adopting cloud platforms, such as Amazon Web Services, Microsoft Azure and Google Cloud Platform, for their operational and research computing infrastructure.
+However, on-demand pricing can present challenges for organisations that require certainty in their expenditure.
 This is especially true for organisations with technical users, who require both autonomy and access to the latest hardware, such as multi-GPU virtual machines.
 The limitations of budget monitoring and enforcing tools can require organisations to either limit the number of users accessing resources and the type of resources they can access or employ dedicated staff to monitor resource usage and costs.
 Neither approach is ideal: the former can restrict the cloud's potential, while the latter is time-consuming and error-prone.
@@ -57,7 +57,7 @@ Microsoft Azure, which is the focus of this work, offers tools for managing cost
 These tools are designed for individual subscriptions, and they do not scale effectively for organisations with many subscriptions.
 Moreover, they do not offer a mechanism to impose strict limits on spending or specify the duration for which a budget is valid.
 
-Our response to this challenge is development of [RCTab](https://rctab.readthedocs.io/), an open-source system for automating the management of subscriptions on Azure.
+Our response to this challenge is the development of [RCTab](https://rctab.readthedocs.io/), an open-source system for automating the management of subscriptions on Azure.
 
 RCTab has been developed by the Alan Turing Institute's Research Computing team and is used at the Institute to oversee hundreds of subscriptions used by researchers and support staff with plans to expand its use to other organisations and cloud providers.
 
