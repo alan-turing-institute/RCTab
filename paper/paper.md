@@ -48,6 +48,7 @@ It is written in Python and has Infrastructure as Code (IaC) deployment for quic
 
 Institutions are adopting cloud platforms, such as Amazon Web Services, Microsoft Azure and Google Cloud Platform, for their operational and research computing infrastructure.
 However, on-demand pricing[^1], can present challenges for organisations that require certainty in their expenditure.
+
 This is especially true for organisations with technical users, who require both autonomy and access to the latest hardware, such as multi-GPU virtual machines.
 The limitations of budget monitoring and enforcing tools can require organisations to either limit the number of users accessing resources and the type of resources they can access or employ dedicated staff to monitor resource usage and costs.
 Neither approach is ideal: the former can restrict the cloud's potential, while the latter is time-consuming and error-prone.
