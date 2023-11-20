@@ -13,7 +13,6 @@ authors:
     orcid: 0000-0002-8351-9857
     affiliation: 1
   - name: Oscar Giles
-    orcid: 0000-0000-0000-0000
   - name: Joseph Palmer
     orcid: 0000-0002-5593-9352
     affiliation: 1
@@ -36,8 +35,8 @@ bibliography: paper.bib
 ## Summary
 
 The advent of commercial cloud services has provided researchers with the benefits of flexible and scalable computing and storage resources.
-Unfortunately, cloud providers do not always provide the ability to enforce strict budget controls, allowing users to overspend.
-This can present serious challenges for adoption in research organisations that need to centrally disseminate cloud resources to researchers with independent budgets.
+However, cloud providers do not always provide cost control measures with ability to enforce strict budget controls, potentially allowing users to overspend.
+This presents serious challenges for adoption in research organisations that need to centrally disseminate cloud resources to researchers with independent budgets.
 In response, we have developed [RCTab](https://rctab.readthedocs.io/) (**R**esearch **C**omputing **Tab**les), an open-source system for budget control and [subscription](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-setup-guide/organize-resources#management-levels-and-hierarchy) management.
 RCTab enables organisations to centrally manage cloud resources while enforcing strict budget controls.
 Organisations can allocate budgets, and RCTab will automatically monitor usage and shut down cloud resources when it is consumed.
@@ -48,14 +47,14 @@ It is written in Python and has Infrastructure as Code (IaC) deployment for quic
 ## Statement of Need
 
 Institutions are adopting cloud platforms, such as Amazon Web Services, Microsoft Azure and Google Cloud Platform, for their operational and research computing infrastructure.
-However, on-demand pricing can present challenges for organisations that require certainty in their expenditure.
+However, on-demand pricing[^1], can present challenges for organisations that require certainty in their expenditure.
 This is especially true for organisations with technical users, who require both autonomy and access to the latest hardware, such as multi-GPU virtual machines.
 The limitations of budget monitoring and enforcing tools can require organisations to either limit the number of users accessing resources and the type of resources they can access or employ dedicated staff to monitor resource usage and costs.
 Neither approach is ideal: the former can restrict the cloud's potential, while the latter is time-consuming and error-prone.
 
 Microsoft Azure, which is the focus of this work, offers tools for managing costs, such as [budgets](https://docs.microsoft.com/en-us/azure/cost-management-billing/costs/tutorial-acm-create-budgets), [cost alerts](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/cost-mgt-alerts-monitor-usage-spending), and [cost analysis](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/quick-acm-cost-analysis).
 These tools are designed for individual subscriptions, and they do not scale effectively for organisations with many subscriptions.
-Moreover, they do not offer a mechanism to impose strict limits on spending or specify the duration for which a budget is valid.
+Moreover, they do not offer a mechanism to impose strict limits on spending, instead sending alerts when the threshold is exceeded, or specify the duration for which a budget is valid.
 
 Our response to this challenge is the development of [RCTab](https://rctab.readthedocs.io/), an open-source system for automating the management of subscriptions on Azure.
 
@@ -104,10 +103,10 @@ The web server will email users about changes to their subscriptions and send da
 A simple method for organising an Azure tenant is to create one subscription per project (or per-group or per-department, etc).
 RBAC assignments can be used to grant permissions to researchers at the subscription level, giving them the freedom to create, modify and delete resources within that subscription as their work requires.
 
-Once a subscription has been created, it will need to be placed into a management group so that RCTab can monitor it.
-RCTab will have been given control over a management group during setup.
+Once a subscription has been created, it will need to be placed into a management group visible to RCTab.
+RCTab will manage those subscriptions it has read/write access to and monitor those that it has read-only access to.
 
-![System diagram.\label{fig:Figure 2}](figure2.png)
+![Management group hierarchy.\label{fig:Figure 2}](figure2.png)
 
 Using the CLI, an administrator can add an "approval" for the subscription to RCTab that specifies the amount and duration of the budget for the subscription.
 
@@ -129,3 +128,5 @@ Azure will permanently delete the subscription after approximately 90 days, thou
 - Pamela Wochner added summary emails, as well as work on preparations for making the project open-source.
 - In addition to code review and contributions, Eseoghene Ben-Iwhiwhu provided feedback on the documentation.
 - We would like to acknowledge code and documentation contributions by Markus Hauru, Jim Madge and Federico Nanni.
+
+[^1]: With "on-demand" or "pay as you go" pricing, customers are billed for what they use, with no upfront costs. Although it is not the only cloud pricing option, it is the simplest and the most common.
