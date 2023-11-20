@@ -36,7 +36,7 @@ bibliography: paper.bib
 ## Summary
 
 The advent of commercial cloud services has provided researchers with the benefits of flexible and scalable computing and storage resources.
-However, they present a challenge for organizations that require predictability in their expenditure, as the cost control mechanisms are not always well suited to large numbers of research projects with varied budgetary constraints.
+However, they present a challenge for organisations that require predictability in their expenditure, as the cost control mechanisms are not always well suited to large numbers of research projects with varied budgetary constraints.
 
 In response, we have developed [RCTab](https://rctab.readthedocs.io/) (**R**esearch **C**omputing **Tab**les), an open-source system for automating the management of [subscriptions](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-setup-guide/organize-resources#management-levels-and-hierarchy) on Azure, Microsoft’s cloud computing platform.
 RCTab automates the mundane management tasks of monitoring usage, alerting stakeholders of impending overspend and stopping subscriptions once they are over-budget.
@@ -71,7 +71,7 @@ The source code for RCTab is contained in five repositories:
 - the [Functions](https://github.com/alan-turing-institute/rctab-functions) repository contains three Azure function apps, which are also pushed to DockerHub ([usage](https://hub.docker.com/r/turingrc/rctab-usage), [status](https://hub.docker.com/r/turingrc/rctab-status) and [controller](https://hub.docker.com/r/turingrc/rctab-controller)) each release.
 - the [eponymous repository](https://github.com/alan-turing-institute/rctab) houses the general documentation (the other repositories also have sites for component-specific documentation).
 
-Detailed instructions on how to deploy RCTab to Azure with Pulumi can be found in the docs for the Infrastructure repository.
+Detailed instructions on how to deploy RCTab to Azure with Pulumi can be found in the docs for the [Infrastructure](https://github.com/alan-turing-institute/rctab-infrastructure) repository.
 Once Pulumi has been installed and the necessary settings have been configured, an instance of RCTab can be deployed or destroyed in minutes.
 Additional instances (e.g. for testing) can also be created quickly.
 
@@ -122,7 +122,7 @@ Azure will permanently delete the subscription after approximately 90 days, thou
 ## Acknowledgements
 
 - This work was supported in part through computational resources provided by The Alan Turing Institute under EPSRC grant EP/N510129/1 and with the help of a generous gift from Microsoft Corporation.
-- Oscar Giles is the original project author, responsible for initial design and implementation of the API and CLI.
+- Oscar Giles is the original project author, responsible for the initial design and implementation of the API and CLI.
 - Iain Stenson added the function apps and newer features of the API and CLI.
 - Tomas Lazauskas provided guidance and support for the project, as well as contributions to the API codebase.
 - Joseph Palmer refined the automated deployment and the front-end details pages, amongst other work.
