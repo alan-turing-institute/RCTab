@@ -37,7 +37,7 @@ bibliography: paper.bib
 The advent of commercial cloud services has provided researchers with the benefits of flexible and scalable computing and storage resources.
 However, cloud providers do not always provide cost control measures with ability to enforce strict budget controls, potentially allowing users to overspend.
 This presents serious challenges for adoption in research organisations that need to centrally disseminate cloud resources to researchers with independent budgets.
-In response, we have developed [RCTab](https://rctab.readthedocs.io/) (**R**esearch **C**omputing **Tab**les), an open-source system for budget control and [subscription](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-setup-guide/organize-resources#management-levels-and-hierarchy) management.
+In response, we have developed [RCTab](https://rctab.readthedocs.io/) (**R**esearch **C**omputing **Tab**les), an open-source system for budget control and [subscription](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-setup-guide/organize-resources#management-levels-and-hierarchy) management on Azure, Microsoft’s cloud computing platform.
 RCTab enables organisations to centrally manage cloud resources while enforcing strict budget controls.
 Organisations can allocate budgets, and RCTab will automatically monitor usage and shut down cloud resources when it is consumed.
 It enables users to monitor their budget usage via a web interface and email alert system.
