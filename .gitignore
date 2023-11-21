@@ -134,6 +134,6 @@ dmypy.json
 .idea/
 
 # JOSS Paper
-paper/media/figure1.png
+paper/media/*
 paper/paper.jats
 paper/paper.pdf
