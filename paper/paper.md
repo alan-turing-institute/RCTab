@@ -13,6 +13,8 @@ authors:
     orcid: 0000-0002-8351-9857
     affiliation: 1
   - name: Oscar Giles
+    orcid: 0000-0002-4056-1916
+    affiliation: 1
   - name: Joseph Palmer
     orcid: 0000-0002-5593-9352
     affiliation: 1
