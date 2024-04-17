@@ -35,9 +35,10 @@ Contribute
 We welcome contributions in the form of issues and pull requests. Please see our :doc:`contributing guidelines <content/contributing>` and :doc:`code of conduct <content/code_of_conduct>`.
 
 Important Notice
-+++++++++++++
+++++++++++++++++
 
-At the moment, we do not plan to support other cloud service providers (e.g., GCP, AWS, and so on) as the internal workings of subscription and costing varies across cloud platforms. However, we may consider adding support for them in the future. Please get in touch via the repo if you would like to discuss further.
+At the moment, we do not plan to support other cloud service providers (e.g., GCP, AWS, and so on) as the internal workings of subscription and costing varies across cloud platforms. However, we may consider adding support for them in the future. Please get in touch via the repo (open an issue) if you would like to discuss further.
+
 Contact Us
 ++++++++++
 
