@@ -132,6 +132,7 @@ dmypy.json
 
 # Pycharm
 .idea/
+<<<<<<< HEAD
 
 # JOSS Paper
 paper/media/*

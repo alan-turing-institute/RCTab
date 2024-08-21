@@ -1,3 +1,5 @@
+<img src="./RCTab.png" width="260" align="right">
+
 # RCTab
 
 [![Documentation Status](https://readthedocs.org/projects/rctab/badge/?version=latest)](https://rctab.readthedocs.io/en/latest/?badge=latest)
