@@ -52,7 +52,6 @@ RCTab is released under an MIT licence. See [LICENSE](LICENSE).
 
 This work was supported in part through computational resources provided by The Alan Turing Institute under **EPSRC grant EP/N510129/1** and with the help of a generous gift from Microsoft Corporation.
 
-
 ## ⚠️  Disclaimer
 
 The Alan Turing Institute and its group companies ("we", "us", the "Turing") make no representations, warranties, or guarantees, express or implied, regarding the information contained in this repository, including but not limited to information about the use or deployment of the RCTab and/or related materials.
