@@ -16,6 +16,8 @@ The source code for RCTab is contained in five repositories:
 - The [Infrastructure](https://github.com/alan-turing-institute/rctab-infrastructure) repository contains code for automated deployment with [Pulumi](https://www.pulumi.com/).
 - The [API](https://github.com/alan-turing-institute/rctab-api) repository has code for the webserver, which is pushed [to DockerHub](https://hub.docker.com/r/turingrc/rctab-api) each time there is a new release.
 - The [Functions](https://github.com/alan-turing-institute/rctab-functions) repository contains three Azure function apps, which are also pushed to DockerHub ([usage](https://hub.docker.com/r/turingrc/rctab-usage), [status](https://hub.docker.com/r/turingrc/rctab-status), and [controller](https://hub.docker.com/r/turingrc/rctab-controller)) each release.
+- The [FastApiMsal](https://github.com/alan-turing-institute/fastapimsal) repository provides integration for Microsoft Entra ID (formerly Azure AD) within FastAPI applications.
+- The [rctab-models](https://github.com/alan-turing-institute/rctab-models) repository contains [pydantic](https://docs.pydantic.dev/latest/) models that are used by the server and client components.
 
 ## Contact Information
 
