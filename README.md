@@ -23,7 +23,6 @@ The source code for RCTab is contained in five repositories:
 
 If you need to get in touch with us, please open an issue on GitHub. See also [CONTRIBUTING.md](CONTRIBUTING.md).
 
-
 ## Contributors
 
 <table>
