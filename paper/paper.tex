@@ -2,8 +2,7 @@
 \PassOptionsToPackage{unicode}{hyperref}
 \PassOptionsToPackage{hyphens}{url}
 %
-\documentclass[
-]{article}
+\documentclass{article}
 \usepackage{amsmath,amssymb}
 \usepackage{iftex}
 \ifPDFTeX
@@ -64,7 +63,7 @@
   hidelinks,
   pdfcreator={LaTeX via pandoc}}
 
-\title{RCTab: An Azure Subscription Management System}
+\title{RCTab: An Azure subscription management system}
 \author{}
 \date{29 April 2024}
 
@@ -86,15 +85,15 @@ control and
 \href{https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-setup-guide/organize-resources\#management-levels-and-hierarchy}{subscription}
 management on Azure, Microsoft's cloud computing platform. RCTab enables
 organisations to centrally manage cloud resources while enforcing strict
-budget controls. Organisations can allocate budgets, and RCTab will
-automatically monitor usage and shut down cloud resources when it is
+budget controls. Organisations can allocate budgets and RCTab will
+automatically monitor usage and shut down cloud resources when they are
 consumed. It enables users to monitor their budget usage via a web
 interface and email alert system. RCTab is designed to be customisable
 and extensible, so can be easily adapted to the needs of different
 organisations. It is written in Python and has Infrastructure as Code
 (IaC) deployment for quick and reliable deployment to Azure.
 
-\subsection{Statement of Need}\label{statement-of-need}
+\subsection{Statement of need}\label{statement-of-need}
 
 Institutions are adopting cloud platforms, such as Amazon Web Services,
 Microsoft Azure and Google Cloud Platform, for their operational and
@@ -102,10 +101,10 @@ research computing infrastructure. However, on-demand
 pricing\footnote{With ``on-demand'' or ``pay as you go'' pricing,
   customers are billed for what they use, with no upfront costs.
   Although it is not the only cloud pricing option, it is the simplest
-  and the most common.}, can present challenges for organisations that
+  and the most common.} can present challenges for organisations that
 require certainty in their expenditure.
 
-This is especially true for organisations with technical users, who
+This is especially true for organisations with technical users who
 require both autonomy and access to the latest hardware, such as
 multi-GPU virtual machines. The limitations of budget monitoring and
 enforcing tools can require organisations to either limit the number of
@@ -115,12 +114,12 @@ approach is ideal: the former can restrict the cloud's potential, while
 the latter is time-consuming and error-prone.
 
 Microsoft Azure, which is the focus of this work, offers tools for
-managing costs, such as budgets, cost alerts, and cost analysis\cite{azurecm}.
+managing costs, such as budgets, cost alerts, and cost analysis~\cite{azurecm}.
 These tools are designed for individual subscriptions, and
 they do not scale effectively for organisations with many subscriptions.
 Moreover, they do not offer a mechanism to impose strict limits on
-spending, instead sending alerts when the threshold is exceeded, or
-specify the duration for which a budget is valid.
+spending---instead sending alerts when the threshold is exceeded---or
+to specify the duration for which a budget is valid.
 
 Our response to this challenge is the development of
 \href{https://rctab.readthedocs.io/}{RCTab}, an open-source system for
@@ -148,7 +147,7 @@ The source code for RCTab is contained in five repositories:
   \href{https://www.pulumi.com/}{Pulumi}.
 \item
   the \href{https://github.com/alan-turing-institute/rctab-api}{API}
-  repository has code for the webserver, which is pushed
+  repository has code for the web server, which is pushed
   \href{https://hub.docker.com/r/turingrc/rctab-api}{to DockerHub} each
   time there is a new release.
 \item
@@ -171,7 +170,7 @@ found in the docs for the
 \href{https://github.com/alan-turing-institute/rctab-infrastructure}{Infrastructure}
 repository. Once Pulumi has been installed and the necessary settings
 have been configured, an instance of RCTab can be deployed or destroyed
-in minutes. Additional instances (e.g.~for testing) can also be created
+in minutes. Additional instances (\textit{e.g.,} for testing) can also be created
 quickly.
 
 \subsection{Operation}\label{operation}
@@ -195,11 +194,11 @@ Once deployed to Azure, an instance of RCTab will comprise:
 
 \begin{figure}
 \centering
-\includegraphics{figure1.png}
+\includegraphics[width=0.8\textwidth]{figure1.png}
 \caption{System diagram.\label{fig:Figure 1}}
 \end{figure}
 
-Users can use the web frontend to see subscriptions' spending and budget
+Users can use the web front end to see subscriptions' spending and budget
 details, such as remaining amount, expiration date, the project to which
 spending will be charged and list of RBAC assignments.
 
@@ -209,7 +208,7 @@ get summaries.
 
 RCTab integrates with Microsoft Entra ID (previously ``Azure Active
 Directory'') to provide ``Single Sign On'' authentication for the
-frontend and CLI.
+front end and CLI.
 
 The Usage and Status functions run on a schedule to collect information
 about subscriptions' recent spending and current state, respectively,
@@ -221,11 +220,10 @@ subscriptions need to be turned off or on.
 The web server will email users about changes to their subscriptions and
 send daily email summaries to administrators.
 
-\subsection{Lifecycle of a
-Subscription}\label{lifecycle-of-a-subscription}
+\subsection{Lifecycle of a subscription}\label{lifecycle-of-a-subscription}
 
 A simple method for organising an Azure tenant is to create one
-subscription per project (or per-group or per-department, etc). RBAC
+subscription per project (or per group or per department, etc). RBAC
 assignments can be used to grant permissions to researchers at the
 subscription level, giving them the freedom to create, modify and delete
 resources within that subscription as their work requires.
@@ -260,34 +258,21 @@ subscription can be re-activated up until that point.
 
 \subsection{Acknowledgements}\label{acknowledgements}
 
-\begin{itemize}
-\tightlist
-\item
-  This work was supported in part through computational resources
-  provided by The Alan Turing Institute under EPSRC grant EP/N510129/1
-  and with the help of a generous gift from Microsoft Corporation.
-\item
-  Oscar Giles is the original project author, responsible for the
-  initial design and implementation of the API and CLI.
-\item
-  Iain Stenson added the function apps and newer features of the API and
-  CLI.
-\item
-  Tomas Lazauskas provided guidance and support for the project, as well
-  as contributions to the API codebase.
-\item
-  Joseph Palmer refined the automated deployment and the front-end
-  details pages, amongst other work.
-\item
-  Pamela Wochner added summary emails, as well as work on preparations
-  for making the project open-source.
-\item
-  In addition to code review and contributions, Eseoghene Ben-Iwhiwhu
-  provided feedback on the documentation.
-\item
-  We would like to acknowledge code and documentation contributions by
-  Markus Hauru, Jim Madge and Federico Nanni.
-\end{itemize}
+This work was supported in part through computational resources
+provided by The Alan Turing Institute under EPSRC grant EP/N510129/1
+and with the help of a generous gift from Microsoft Corporation. Oscar
+Giles is the original project author, responsible for the initial
+design and implementation of the API and CLI.\@ Iain Stenson added the
+function apps and newer features of the API and CLI.\@ Tomas Lazauskas
+provided guidance and support for the project, as well as
+contributions to the API codebase. Joseph Palmer refined the automated
+deployment and the front-end details pages, amongst other work. Pamela
+Wochner added summary emails, as well as work on preparations for
+making the project open-source. In addition to code review and
+contributions, Eseoghene Ben-Iwhiwhu provided feedback on the
+documentation. We would like to acknowledge code and documentation
+contributions by Markus Hauru, Jim Madge and Federico Nanni.
+
 \begin{thebibliography}{9}
 
 \bibitem{azurecm}
