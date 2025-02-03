@@ -121,6 +121,10 @@ Moreover, they do not offer a mechanism to impose strict limits on
 spending---instead sending alerts when the threshold is exceeded---or
 to specify the duration for which a budget is valid.
 
+The situation with AWS and GCP is similar, in that they also have cost monitoring features, policies/quotas that can reduce costs and customisable spending alerts.
+On AWS, these alerts can trigger a built-in action that will turn off EC2 and RDS instances.
+Neither has a built-in mechanism to enforce a strict budget across a wide range of services.
+
 Our response to this challenge is the development of
 \href{https://rctab.readthedocs.io/}{RCTab}, an open-source system for
 automating the management of subscriptions on Azure.
@@ -279,7 +283,7 @@ contributions by Markus Hauru, Jim Madge and Federico Nanni.
     Cost management documentation,
     Azure,
     https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/,
-    Accessed 29 April 2024. 
+    Accessed 29 April 2024.
 
 \end{thebibliography}
 \end{document}
