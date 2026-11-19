@@ -50,6 +50,12 @@
       "groupName": "python",
       "automerge": false,
       "dependencyDashboardApproval": true
+    },
+    {
+      "description": "Docker Hub's floating tags (postgres:18, python:3.15) have no release timestamp, so minimumReleaseAge would leave them pending forever. These updates need dashboard approval anyway",
+      "matchDatasources": ["docker"],
+      "matchPackageNames": ["postgres", "docker.io/postgres", "python", "docker.io/python"],
+      "minimumReleaseAge": null
     }
   ]
 }
