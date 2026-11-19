@@ -1,0 +1,18 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Extra Renovate rules for RCTab repositories that are libraries without a lock file, such as rctab-models and fastapimsal",
+  "packageRules": [
+    {
+      "description": "We are a library: widen ranges so we don't force newer minimums on consumers",
+      "matchManagers": ["poetry"],
+      "matchDepTypes": ["dependencies"],
+      "rangeStrategy": "widen"
+    },
+    {
+      "description": "Dev tools are pinned exactly in pyproject.toml (there is no lock file), so keep them pinned",
+      "matchManagers": ["poetry"],
+      "matchDepTypes": ["dev"],
+      "rangeStrategy": "pin"
+    }
+  ]
+}

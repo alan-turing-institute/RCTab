@@ -1,0 +1,55 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Default Renovate config for RCTab repositories",
+  "extends": [
+    "config:recommended",
+    ":dependencyDashboard",
+    "schedule:weekly"
+  ],
+  "timezone": "Europe/London",
+  "labels": ["dependencies"],
+  "minimumReleaseAge": "3 days",
+  "lockFileMaintenance": {
+    "enabled": true,
+    "automerge": true
+  },
+  "pre-commit": {
+    "enabled": true
+  },
+  "vulnerabilityAlerts": {
+    "labels": ["security"]
+  },
+  "packageRules": [
+    {
+      "description": "Automerge low-risk updates once CI passes",
+      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
+      "automerge": true
+    },
+    {
+      "description": "One PR for dev tooling",
+      "matchManagers": ["poetry"],
+      "matchDepTypes": ["dev"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "groupName": "dev dependencies"
+    },
+    {
+      "description": "One PR for CI and pre-commit tooling",
+      "matchManagers": ["github-actions", "pre-commit"],
+      "groupName": "ci tooling"
+    },
+    {
+      "description": "Our own libraries: update together, as soon as we tag a release, and let a human merge",
+      "matchDepNames": ["rctab_models", "rctab-models", "fastapimsal"],
+      "groupName": "rctab internal",
+      "minimumReleaseAge": null,
+      "automerge": false
+    },
+    {
+      "description": "Python version bumps are deliberate: own PR, approved from the Dependency Dashboard, never automerged",
+      "matchDepNames": ["python"],
+      "groupName": "python",
+      "automerge": false,
+      "dependencyDashboardApproval": true
+    }
+  ]
+}
