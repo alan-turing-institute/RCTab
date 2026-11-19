@@ -33,6 +33,13 @@
       "groupName": "dev dependencies"
     },
     {
+      "description": "Automerge major updates of dev tools too: CI catches anything they break, and runtime majors still wait for a human",
+      "matchManagers": ["poetry"],
+      "matchDepTypes": ["dev"],
+      "matchUpdateTypes": ["major"],
+      "automerge": true
+    },
+    {
       "description": "One PR for CI and pre-commit tooling",
       "matchManagers": ["github-actions", "pre-commit"],
       "groupName": "ci tooling"
