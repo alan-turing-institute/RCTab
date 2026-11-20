@@ -2,7 +2,7 @@
 
 # RCTab
 
-[![Documentation Status](https://readthedocs.org/projects/rctab/badge/?version=latest)](https://rctab.readthedocs.io/en/latest/?badge=latest)
+[![Documentation Status](https://app.readthedocs.org/projects/rctab/badge/?version=latest)](https://rctab.readthedocs.io/en/latest/)
 
 An Azure subscription management, reporting, and usage monitoring system created by The Alan Turing Institute.
 
