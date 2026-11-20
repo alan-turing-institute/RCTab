@@ -26,11 +26,16 @@
       "automerge": true
     },
     {
-      "description": "One PR for dev tooling",
+      "description": "One PR for runtime minor and patch updates. Runtime majors get their own PRs because they may need code changes. Later rules move dev, CI, internal and Python updates into their own groups",
+      "matchUpdateTypes": ["minor", "patch"],
+      "groupName": "dependencies"
+    },
+    {
+      "description": "One PR for dev tooling, majors included",
       "matchManagers": ["poetry"],
       "matchDepTypes": ["dev"],
-      "matchUpdateTypes": ["minor", "patch"],
-      "groupName": "dev dependencies"
+      "groupName": "dev dependencies",
+      "separateMajorMinor": false
     },
     {
       "description": "Automerge major updates of dev tools too: CI catches anything they break, and runtime majors still wait for a human",
@@ -40,9 +45,10 @@
       "automerge": true
     },
     {
-      "description": "One PR for CI and pre-commit tooling",
+      "description": "One PR for CI and pre-commit tooling, majors included",
       "matchManagers": ["github-actions", "pre-commit"],
-      "groupName": "ci tooling"
+      "groupName": "ci tooling",
+      "separateMajorMinor": false
     },
     {
       "description": "Our own libraries: update together, as soon as we tag a release, and let a human merge",
