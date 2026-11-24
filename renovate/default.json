@@ -16,6 +16,24 @@
   "pre-commit": {
     "enabled": true
   },
+  "customManagers": [
+    {
+      "description": "The Poetry that CI and Docker images install, pinned so a new Poetry release can't change CI results unannounced",
+      "customType": "regex",
+      "managerFilePatterns": [
+        "/^\\.github/workflows/.+\\.ya?ml$/",
+        "/(^|/)Dockerfile[^/]*$/"
+      ],
+      "matchStrings": [
+        "pip install poetry==(?<currentValue>\\d[^\\s\"']*)",
+        "poetry-version:\\s*[\"']?(?<currentValue>\\d[^\\s\"']*)",
+        "POETRY_VERSION=[\"']?(?<currentValue>\\d[^\\s\"']*)"
+      ],
+      "depNameTemplate": "poetry",
+      "datasourceTemplate": "pypi",
+      "versioningTemplate": "pep440"
+    }
+  ],
   "vulnerabilityAlerts": {
     "labels": ["security"]
   },
@@ -47,6 +65,13 @@
     {
       "description": "One PR for CI and pre-commit tooling, majors included",
       "matchManagers": ["github-actions", "pre-commit"],
+      "groupName": "ci tooling",
+      "separateMajorMinor": false
+    },
+    {
+      "description": "The Poetry that CI and Docker images install joins the CI tooling PR. This doesn't change the Poetry that Renovate relocks with (the version in each poetry.lock header) or a project's requires-poetry minimum, which are bumped by hand",
+      "matchManagers": ["custom.regex"],
+      "matchDepNames": ["poetry"],
       "groupName": "ci tooling",
       "separateMajorMinor": false
     },
