@@ -5,6 +5,9 @@ description = "An Azure subscription management, reporting, and usage monitoring
 authors = []
 license = "MIT"
 readme = "README.md"
+# Oldest Poetry that may work on this project.
+# Bump it by hand when we need a newer Poetry feature.
+requires-poetry = ">=2.4"
 
 [tool.poetry.dependencies]
 python = "^3.11"
